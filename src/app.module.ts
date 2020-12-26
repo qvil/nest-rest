@@ -5,9 +5,10 @@ import { UsersModule } from './users/users.module';
 import { IpController } from './ip/ip.controller';
 import { RedirectController } from './redirect/redirect.controller';
 import { TypeOrmModule } from './typeorm.module';
+import { PhotosModule } from './photos/photos.module';
 
 @Module({
-  imports: [UsersModule, TypeOrmModule],
+  imports: [UsersModule, TypeOrmModule, PhotosModule],
   controllers: [AppController, IpController, RedirectController],
   providers: [AppService],
 })

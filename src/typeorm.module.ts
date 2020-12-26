@@ -12,6 +12,7 @@ import { TypeOrmModule as _TypeOrmModule } from '@nestjs/typeorm';
       database: 'test',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
+      autoLoadEntities: true,
     }),
   ],
 })
