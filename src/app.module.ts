@@ -1,14 +1,21 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
+import { ConfigModule } from '@nestjs/config';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from './users/users.module';
 import { IpController } from './ip/ip.controller';
 import { RedirectController } from './redirect/redirect.controller';
-import { TypeOrmModule } from './typeorm.module';
-import { PhotosModule } from './photos/photos.module';
+import { CatsModule } from './cats/cats.module';
+import { OwnersModule } from './owners/owners.module';
 
 @Module({
-  imports: [UsersModule, TypeOrmModule, PhotosModule],
+  imports: [
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.DB_URL),
+    CatsModule,
+    OwnersModule,
+  ],
   controllers: [AppController, IpController, RedirectController],
   providers: [AppService],
 })
