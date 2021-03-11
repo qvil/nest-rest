@@ -32,11 +32,12 @@
     "class-validator": "^0.12.2",
     "mongoose": "^5.11.8",
     "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.3",
     "swagger-ui-express": "^4.1.6",
-    "typeorm": "^0.2.29"
+    "typeorm": "^0.2.31"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.5.1",
